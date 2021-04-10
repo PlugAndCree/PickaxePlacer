@@ -27,10 +27,8 @@ public class PlaceEvent implements Listener {
 				return;
 
 			if (e.getHand() == EquipmentSlot.HAND) {
-				System.out.println("BLOCCATO -> " + e.getHand().name());
 				return;
 			}
-			System.out.println("FUNZIONA -> " + e.getHand().name());
 			for (Material m : PickaxePlacer.getInstance().getOres()) {
 				ItemStack item = new ItemStack(m);
 
