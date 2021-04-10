@@ -37,8 +37,7 @@ public class PlaceEvent implements Listener {
 					Location newLoc = e.getClickedBlock().getLocation()
 							.add(PickaxePlacer.getInstance().getLocations().get(e.getBlockFace()));
 
-					if (newLoc.getWorld().getBlockAt(newLoc).getType() == Material.WATER
-							|| newLoc.getWorld().getBlockAt(newLoc).getType() == Material.LAVA)
+					if (newLoc.getWorld().getBlockAt(newLoc).getType() != Material.AIR)
 						return;
 
 					BlockBreakEvent bre = new BlockBreakEvent(e.getClickedBlock(), e.getPlayer());
